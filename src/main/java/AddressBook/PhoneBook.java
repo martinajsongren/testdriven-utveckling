@@ -1,6 +1,6 @@
 package AddressBook;
 
-import set.ArraySet;
+import ArraySet.ArraySet;
 
 import java.util.UUID;
 

@@ -54,5 +54,12 @@ class ArraySetTest {
 
     @Test
     void size() {
+        assertEquals(arraySet.size(), 0);
+        arraySet.add("Test");
+        arraySet.add("Commit");
+        arraySet.add("Functionality");
+        assertEquals(arraySet.size(), 3);
+        arraySet.remove("Commit");
+        assertEquals(arraySet.size(), 2);
     }
 }

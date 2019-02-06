@@ -36,6 +36,11 @@ class ArraySetTest {
 
     @Test
     void get() {
+        arraySet.add("Gul");
+        arraySet.add("Blå");
+        arraySet.add("Lila");
+        assertEquals(arraySet.get(2), "Lila");
+        assertEquals(arraySet.get(0), "Gul");
     }
 
     @Test

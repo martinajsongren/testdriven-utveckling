@@ -20,6 +20,10 @@ public class ArraySet<E> implements SimpleSet<E> {
 
     @Override
     public boolean remove(Object x) {
+        if (arrayList.contains(x)){
+            arrayList.remove(x);
+            return true;
+        }
         return false;
     }
 

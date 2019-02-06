@@ -29,7 +29,7 @@ public class ArraySet<E> implements SimpleSet<E> {
 
     @Override
     public boolean contains(Object x) {
-        return false;
+        return arrayList.contains(x);
     }
 
     @Override

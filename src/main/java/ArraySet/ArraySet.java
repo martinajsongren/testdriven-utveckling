@@ -34,7 +34,7 @@ public class ArraySet<E> implements SimpleSet<E> {
 
     @Override
     public E get(int pos) {
-        return null;
+        return arrayList.get(pos);
     }
 
     @Override

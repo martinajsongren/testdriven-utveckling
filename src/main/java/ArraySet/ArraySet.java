@@ -1,8 +1,20 @@
 package ArraySet;
 
+import java.util.ArrayList;
+
 public class ArraySet<E> implements SimpleSet<E> {
+    private ArrayList<E> arrayList;
+
+    public ArraySet() {
+        this.arrayList = new ArrayList<>();
+    }
+
     @Override
     public boolean add(E x) {
+        if (!arrayList.contains(x)){
+            arrayList.add(x);
+            return true;
+        }
         return false;
     }
 

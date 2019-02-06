@@ -22,6 +22,9 @@ class ArraySetTest {
 
     @Test
     void remove() {
+        arraySet.add(5);
+        assertFalse(arraySet.remove(6));
+        assertTrue(arraySet.remove(5));
     }
 
     @Test

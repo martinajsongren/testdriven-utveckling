@@ -29,6 +29,9 @@ class ArraySetTest {
 
     @Test
     void contains() {
+        arraySet.add("Gitta Committa");
+        assertFalse(arraySet.contains("git commit"));
+        assertTrue(arraySet.contains("Gitta Committa"));
     }
 
     @Test

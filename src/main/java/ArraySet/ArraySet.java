@@ -44,6 +44,6 @@ public class ArraySet<E> implements SimpleSet<E> {
 
     @Override
     public int size() {
-        return 0;
+        return arrayList.size();
     }
 }

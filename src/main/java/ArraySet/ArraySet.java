@@ -39,7 +39,7 @@ public class ArraySet<E> implements SimpleSet<E> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return arrayList.isEmpty();
     }
 
     @Override

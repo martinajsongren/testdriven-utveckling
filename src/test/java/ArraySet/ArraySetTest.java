@@ -16,6 +16,8 @@ class ArraySetTest {
 
     @Test
     void add() {
+        assertTrue(arraySet.add(5));
+        assertFalse(arraySet.add(5));
     }
 
     @Test

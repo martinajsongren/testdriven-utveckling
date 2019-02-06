@@ -45,6 +45,11 @@ class ArraySetTest {
 
     @Test
     void isEmpty() {
+        assertTrue(arraySet.isEmpty());
+        arraySet.add("Terminator");
+        assertFalse(arraySet.isEmpty());
+        arraySet.remove("Terminator");
+        assertTrue(arraySet.isEmpty());
     }
 
     @Test

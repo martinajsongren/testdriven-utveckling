@@ -4,12 +4,14 @@ import ArraySet.ArraySet;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class PhoneBookTest {
@@ -26,6 +28,11 @@ class PhoneBookTest {
     }
     @Test
     void addContact() {
+        when(arraySet.add(person)).thenReturn(true);
+        assertTrue(phoneBook.addContact(person));
+
+        when(arraySet.add(person)).thenReturn(false);
+        assertFalse(phoneBook.addContact(person));
     }
 
     @Test

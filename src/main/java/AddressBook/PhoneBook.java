@@ -2,6 +2,8 @@ package AddressBook;
 
 import ArraySet.ArraySet;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class PhoneBook {
@@ -24,8 +26,16 @@ public class PhoneBook {
      * @param name The name that is searched for
      * @return Person[] an array with matching persons
      */
-    public Person[] findPersonByName() {
-        return null;
+    public List<Person> findPersonByName(String name) {
+        List result = new ArrayList();
+
+        for (int i = 0; i < addressBook.size(); i++) {
+            Person p = (Person) addressBook.get(i);
+            if (p.getName().equals(name)) {
+                result.add(p);
+            }
+        }
+        return result;
     }
     /**
      * Returns the specific contact from the phone book.

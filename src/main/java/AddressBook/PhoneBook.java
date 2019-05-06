@@ -43,6 +43,13 @@ public class PhoneBook {
      * @return
      */
     public Person getContact(UUID id) {
+        for (int i = 0; i < addressBook.size(); i++) {
+            Person p = (Person) addressBook.get(i);
+            if (p.getId() == id) {
+                return p;
+            }
+
+        }
         return null;
     }
     /**

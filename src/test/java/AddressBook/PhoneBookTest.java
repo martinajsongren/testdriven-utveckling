@@ -42,6 +42,8 @@ class PhoneBookTest {
 
     @Test
     void getContact() {
+        arraySet.add(person);
+        assertEquals(phoneBook.getContact(person.getId()), person);
     }
 
     @Test

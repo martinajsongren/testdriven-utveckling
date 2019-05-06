@@ -17,7 +17,7 @@ public class PhoneBook {
      * @return True if person was added false otherwise.
      */
     public boolean addContact(Person contact) {
-        return false;
+        return addressBook.add(contact);
     }
     /**
      * Search the phone book and return an array with persons matching the name.

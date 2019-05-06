@@ -4,7 +4,6 @@ import ArraySet.ArraySet;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
@@ -37,6 +36,8 @@ class PhoneBookTest {
 
     @Test
     void findPersonByName() {
+        arraySet.add(person);
+        assertEquals(phoneBook.findPersonByName(person.getName()).get(0), person);
     }
 
     @Test

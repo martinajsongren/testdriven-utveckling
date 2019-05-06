@@ -54,11 +54,18 @@ public class PhoneBook {
     }
     /**
      *
-     * @param Contact : The contact with address
+     * @param contact : The contact with address
      * @return Person array with all persons living on the address.
      */
-    public Person[] findContacsOnSameAddress (Person Contact) {
-        return null;
+    public List<Person> findContactsOnSameAddress(Person contact) {
+        List result = new ArrayList();
+        for (int i = 0; i < addressBook.size(); i++) {
+            Person p = (Person) addressBook.get(i);
+            if (p.getStreetAddress().equals(contact.getStreetAddress())) {
+                result.add(p);
+            }
+        }
+        return result;
     }
 
 

@@ -47,6 +47,8 @@ class PhoneBookTest {
     }
 
     @Test
-    void findContacsOnSameAddress() {
+    void findContactsOnSameAddress() {
+        arraySet.add(person);
+        assertEquals(phoneBook.findContactsOnSameAddress(person).get(0), person);
     }
 }
